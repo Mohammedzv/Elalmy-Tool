@@ -60,7 +60,7 @@ def buildblock(size):
 	return(out_str)
 
 def usage():
-	print '-------------------------Elalmy--------------------------'
+	print '(-------------------------Elalmy--------------------------)'
 	print 'USAGE: python httpdoser.py <url>'
 	print 'httpdoser website : DDoS Attack'
 	print "\a"
@@ -91,7 +91,7 @@ print \
 	  
                                           
 """
-print '------------------------Elalmy---------------------------'
+print '(------------------------Elalmy---------------------------)'
 
 	
 #http request
