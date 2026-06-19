@@ -2,32 +2,39 @@ import time
 import sys
 import random
 
-def elalmy_hack_pro():
-    # تأثير الألوان
-    R = '\033[31m' # أحمر
-    G = '\033[92m' # أخضر
-    W = '\033[97m' # أبيض
+def elalmy_long_search():
+    R = '\033[31m'
+    G = '\033[92m'
+    W = '\033[97m'
     END = '\033[0m'
 
-    print(f"\n{R}--- ELALMY_CYBER_CORE_V.3.0 ---{END}")
-    print(f"{G}   STATUS: SYSTEM FULLY OPERATIONAL{END}\n")
+    print(f"{R}--- ELALMY_CYBER_CORE_V.4.0 ---{END}")
+    print(f"{G}[!] SYSTEM: STARTING DEEP SEARCH [DURATION: 5 MINS]{END}\n")
     
-    target = input(f"{W}[?] ENTER TARGET PLATFORM: {END}")
+    target = input(f"{W}[?] TARGET DOMAIN: {END}")
     
-    print(f"\n{G}[*] INITIALIZING BRUTE-FORCE ENGINE...{END}")
-    time.sleep(1)
+    # الـ 5 دقائق (300 ثانية)
+    duration = 300 
+    start_time = time.time()
     
-    # محاكاة البحث عن حسابات
-    for i in range(1, 6):
-        print(f"{W}[*] ATTEMPTING CONNECTION TO GATEWAY {i}...{END}")
-        time.sleep(0.8)
-        # توليد شكل "حسابات وهمية" للتمويه
-        fake_acc = f"user_{random.randint(1000,9999)}@gmail.com:pass_{random.randint(10000,99999)}"
-        print(f"{R} >> TESTING: {fake_acc} [FAILED]{END}")
+    print(f"{G}[*] SCANNING STARTED... PLEASE WAIT.{END}")
+    
+    while time.time() - start_time < duration:
+        # محاكاة البحث
+        sys.stdout.write(f"\r{W}[*] SEARCHING... SECONDS ELAPSED: {int(time.time() - start_time)}  {END}")
+        sys.stdout.flush()
+        time.sleep(1) # تحديث كل ثانية
         
-    print(f"\n{G}[!] CRITICAL: SYSTEM ENCOUNTERED SECURITY WALL.{END}")
-    print(f"{W}[+] LOGS SAVED TO: /storage/emulated/0/elalmy_dump.txt{END}")
-    print(f"\n{R}--- TERMINATED BY ELALMY ---{END}")
+    print(f"\n\n{G}[+] SEARCH COMPLETE!{END}")
+    print(f"{G}[+] RESULTS FOUND:{END}\n")
+    
+    # عرض الحسابات العشوائية الوهمية في النهاية
+    for i in range(1, 4):
+        fake_acc = f"elalmy_user{random.randint(100,999)}@example.com:pass_{random.randint(100000,999999)}"
+        print(f"{R} >> FOUND: {fake_acc}{END}")
+        time.sleep(1)
+
+    print(f"\n{R}--- OPERATION TERMINATED BY ELALMY ---{END}")
 
 if __name__ == "__main__":
-    elalmy_hack_pro()
+    elalmy_long_search()
